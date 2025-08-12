@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!----CryptoJS Outside JavaScript(Hash, Encryption, Decryption)-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
+    <!----Download the script and parse the HTML document simultaneously, after the document parsed entirely, script executed.
+     Improve the load efficiency and not block the HTML document parsed-->
+    <script src="script.js" defer></script>
+    <meta name="author" content="NiChaoyue">
+</head>
+
+<body>
+<!--Display the Encrypted Information-->
+<div class="encrypted-info" id="encrypted-info">
+    <!--'<p>' is usually used for simple text comtent-->
+    <p id="encrypted-vorname">Encrypted-Vorname:</p>
+    <p id="encrypted-nachname">Encrypted-Nachname:</p>
+    <p id="encrypted-password">Encrypted-Password:</p>
+</div>
+
+<div class="zentrieren">
+    <div class="form-container">
+        
+        <div id="login-form">
+            <h2>Login/Einloggen/登录</h2>
+            <form id="loginform_id">
+                <p>
+                    <label for="login_vorname">Vorname/First Name/名</label><br>
+                    <input id="login_vorname" name="vorname" type="text" required>
+                </p>
+                <p>
+                    <label for="login_nachname">Nachname/Surname/姓</label><br>
+                    <input id="login_nachname" name="nachname" type="text" required>
+                </p>
+                <p>
+                    <label for="login_password">Passwort/password/密码</label><br>
+                    <input id="login_password" name="password" type="password" required>
+                </p>
+                <!--Submit Button, text on it is "Einloggen/Login/登录"-->
+                <input type="submit" value="Einloggen/Login/登录">
+                <!--Jump to register-form-->
+                <input type="button" value="Registrieren/Register/注册" onclick="toggleForm('register-form')">
+            </form>
+        </div>
+
+        <div id="register-form" style="display:none;">
+            <h2>Register/Registrieren/注册</h2>
+            <form id="registerform_id">
+                <!--Name used to identify the form data when the form is submitted-->
+                <p>
+                    <label for="register_vorname">Vorname/First Name/名</label><br>
+                    <input id="register_vorname" name="vorname" type="text" required>
+                </p>
+                <p>
+                    <label for="register_nachname">Nachname/Surname/姓</label><br>
+                    <input id="register_nachname" name="nachname" type="text" required>
+                </p>
+                <p>
+                    <label for="register_password">Passwort/password/密码</label><br>
+                    <input id="register_password" name="password" type="password" required>
+                </p>
+                <!--Submit Button, text on it is "Confirm Registration"-->
+                <input type="submit" value="Confirm Registration">
+                <!--Jump to login-form-->
+                <input type="button" value="Back to Login" onclick="toggleForm('login-form')">
+            </form>
+        </div>
+    
+    </div>
+</div>
+
+</body>
+</html>

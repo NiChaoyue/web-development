@@ -1,0 +1,53 @@
+/*
+  author: NiChaoyue
+*/
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcSu402NZ077GYjWNBnEjULScsFIaC4iVUwaWkx5iE_rkI6XWMxd9DUYtJ2kIOZjsJMX8GWaUy20ahWjNuxWm3flacXa7uKCpZ8iP4tnFeo'); /* 这里设置背景图片的路径 */
+    background-size: cover; /* Let the Background Picture cover the whole page */
+    background-position: center; /* Make the background picture at center */
+    background-repeat: no-repeat; /* Not Repeat the background picture */
+}
+
+.zentrieren {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.9); /* make the form half transparent */
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+.encrypted-info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.encrypted-info p {
+    margin: 5px 0;
+}
